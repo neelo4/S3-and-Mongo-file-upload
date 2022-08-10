@@ -1,5 +1,5 @@
 import React from 'react'
-
+import '../styleComponents/Fields.css';
 const fields = () => {
   return (
     <div>       

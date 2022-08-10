@@ -1,19 +1,21 @@
-import '../styleComponents/Preview.css'
-const Preview = () => {
-  return (
-    <div class="box">
-    <div class="js--image-preview"></div>
-    <div class="upload-options">
-      <label>
-        <input type="file" class="image-upload" />
-      </label>
-    </div>
- 
-    
-  </div>
-  )
+import React, { useState } from "react";
+
+function App() {
+	const [file, setFile] = useState();
+	function handleChange(e) {
+		console.log(e.target.files);
+		setFile(URL.createObjectURL(e.target.files[0]));
+	}
+
+	return (
+		<div className="App">
+			<h2>Add Image:</h2>
+			<input type="file" onChange={handleChange} />
+			<img src={file} />
+
+		</div>
+
+	);
 }
 
-
-
-export default Preview
+export default App;

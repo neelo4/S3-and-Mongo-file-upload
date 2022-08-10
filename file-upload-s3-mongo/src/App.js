@@ -1,20 +1,32 @@
-import './index.css';
-import Dropdown from './components/Dropdown';
-import Preview from './components/Preview';
-import Fields from './components/Fields';
-
+import React, { useState } from "react";
+import Dropdown from "./components/Dropdown";
+import Fields from "./components/Fields";
 function App() {
-  return (
-    
-    <div class="wrapper">
-      <Dropdown />
-      <Preview />
-      <Fields />
-   
-  </div>
+	const [file, setFile] = useState();
+	function handleChange(e) {
+		console.log(e.target.files);
+		setFile(URL.createObjectURL(e.target.files[0]));
+	}
 
-  );
+	return (
+    <>
+		<div className="wrapper">
+       <Dropdown />
+       <div>
+       <h5>Add Image</h5>
+       <input type="file" onChange={handleChange} />
+       <img src={file} />
+    </div>
+			
+      <div className="">
+      <Fields />
+      </div>
+     
+    </div>
+ 
+    </>
+	);
 }
-import fields from './components/Fields';
 
 export default App;
+
