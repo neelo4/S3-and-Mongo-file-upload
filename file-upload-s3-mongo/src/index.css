@@ -32,6 +32,14 @@ body {
     display: inline-block;
     margin: 20rem auto 0;
   }
-
+.upload-button{
+   
+        background: black;
+        color: #fff;
+        padding: 1em;
+        border-radius: 8px;
+        margin-top: 8px;
+      
+}
   
    

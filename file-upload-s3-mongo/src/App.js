@@ -21,6 +21,7 @@ function App() {
       <div className="">
       <Fields />
       </div>
+      <button  className="upload-button"type="submit" name="Submit">Upload</button>
      
     </div>
  
