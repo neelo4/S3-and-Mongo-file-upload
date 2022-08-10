@@ -1,2 +1,4 @@
-# S3 and Mongo 
+# Upload images to S3 and MongoDB using Node.
+
+
  
